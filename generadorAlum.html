@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<script>
+    const apellido1 = [
+  'García', 'Hernández', 'Martínez', 'López', 'González',
+  'Pérez', 'Sánchez', 'Ramírez', 'Torres', 'Flores',
+  'Rivera', 'Gómez', 'Díaz', 'Reyes', 'Morales',
+  'Cruz', 'Ortiz', 'Ramos', 'Chávez', 'Mendoza',
+  'Ruiz', 'Álvarez', 'Jiménez', 'Vázquez', 'Castillo',
+  'Guerrero', 'Herrera', 'Medina', 'Gutiérrez', 'Aguilar',
+  'Gallardo', 'Méndez', 'Jiménez', 'Cabrera', 'Vega',
+  'Fernández', 'Núñez', 'Juárez', 'Rojas', 'Molina',
+  'Luna', 'Vargas', 'Campos', 'Romero', 'Espinoza',
+  'Silva', 'Rangel', 'Peña', 'Salazar', 'Cortés',
+  'Zamora', 'León', 'Acosta', 'Orozco', 'Cisneros',
+  'Serrano', 'Contreras', 'Uribe', 'Téllez', 'Dominguez',
+  'Escobar', 'Escamilla', 'Guzmán', 'Mejía', 'Nieves',
+  'Padilla', 'Castañeda', 'Peralta', 'Segura', 'Sandoval',
+  'Valenzuela', 'Pacheco', 'Valle', 'Carmona', 'Bautista',
+  'Zapata', 'Cervantes', 'Herrero', 'Lara', 'Madrigal',
+  'Ojeda', 'Peñaloza', 'Quintero', 'Ríos', 'Santos',
+  'Tejada', 'Urbina', 'Xochitiotzin', 'Yáñez', 'Zarate',
+  'Cabrera', 'Escobedo', 'Ibarra', 'Montes', 'Nieto',  
+  'Esparza', 'Montoya', 'Amador', 'Leyva',
+  'Kim', 'Lee', 'Park', 'Choi', 'Jeong',
+  'Kang', 'Yoon', 'Jang', 'Lim', 'Song',
+  'Hong', 'Shin', 'Yang', 'Han', 'Moon',
+  'Oh', 'Im', 'Seo', 'Chung', 'Kwon',
+  'Yoo', 'Bae', 'Cha', 'Hwang', 'Gwon',
+  'Jeon', 'Ha', 'Gong', 'Ko', 'Nam',
+  'Paek', 'Ryu', 'Son', 'Wang', 'Won',
+  'Yi', 'Yun', 'Yeo', 'Yoo', 'Yun',
+  'Jin', 'Jung', 'Joo', 'Chun', 'Chae',
+  'Bang', 'Rhee', 'Chang', 'Cho', 'Yim',
+  'Sato', 'Suzuki', 'Takahashi', 'Tanaka', 'Watanabe',
+  'Ito', 'Yamamoto', 'Nakamura', 'Kobayashi', 'Kato',
+  'Yoshida', 'Yamada', 'Sasaki', 'Yamaguchi', 'Matsumoto',
+  'Inoue', 'Kimura', 'Shimizu', 'Hayashi', 'Saito',
+  'Mori', 'Abe', 'Ikeda', 'Hashimoto', 'Yamazaki',
+  'Ishikawa', 'Yamashita', 'Ishii', 'Kawaguchi', 'Matsui',
+  'Nishimura', 'Kaneko', 'Fujita', 'Ogawa', 'Okada',
+  'Kudo', 'Ishida', 'Hasegawa', 'Goto', 'Fujimoto',
+  'Kondo', 'Endo', 'Oshima', 'Murakami', 'Shibata',
+  'Nakajima', 'Hirano', 'Maeda', 'Sakamoto', 'Sakai'
+];
+apellido2 = [
+  'Rossi', 'Conti', 'Moretti', 'Ferrari', 'Ricci',
+  'Bianchi', 'Marino', 'Caruso', 'Romano', 'Gallo',
+  'Costa', 'Lombardi', 'Greco', 'Mancini', 'Barbieri',
+  'Gatti', 'Valenti', 'Pellegrini', 'Fontana', 'Rizzo',
+  'De Luca', 'Ferraro', 'Esposito', 'Colombo', 'Bruno',
+  'Rinaldi', 'Longo', 'Amato', 'Gentile', 'Lupo',
+  'Santoro', 'Martino', 'Leon', 'Mazza', 'Fabbri',
+  'Guerini', 'Vitale', 'De Angelis', 'Coppola', 'Leoni',
+  'Lanza', 'Marchesi', 'Mariani', 'Falcone', 'Riva',
+  'Donati', 'Palumbo', 'DAmico', 'DAngelo', 'Ferri',
+  'Martin', 'Dubois', 'Lefevre', 'Leroy', 'Renard',
+  'Fournier', 'Lemoine', 'Moreau', 'Laurent', 'Roux',
+  'Blanc', 'Durand', 'Lefevre', 'Leroux', 'Leclerc',
+  'Mercier', 'Dupont', 'Rousseau', 'Girard', 'Fontaine',
+  'Garnier', 'Chevalier', 'Boucher', 'Dumas', 'Lecomte',
+  'Lambert', 'Bonnet', 'Vidal', 'Marchand', 'Aubert',
+  'Legrand', 'Caron', 'Perrin', 'Gauthier', 'Baron',
+  'Roger', 'Bertin', 'Guillaume', 'Hubert', 'Clement',
+  'Riviere', 'Leroux', 'Fabre', 'Leclercq', 'Michel',
+  'Collet', 'Fischer', 'Berger', 'Guillot', 'Denis',
+  'Silva', 'Santos', 'Oliveira', 'Souza', 'Pereira',
+  'Costa', 'Lima', 'Fernandes', 'Rodrigues', 'Almeida',
+  'Gomes', 'Martins', 'Ribeiro', 'Barbosa', 'Cardoso',
+  'Nascimento', 'Carrillo', 'Araujo', 'Carvalho', 'Dias',
+  'Rezende', 'Cunha', 'Melo', 'Campos', 'Ferreira',
+  'Monteiro', 'Castro', 'Neves', 'Cavalcanti', 'Rocha',
+  'Farias', 'Moraes', 'Siqueira', 'Freitas', 'Morais',
+  'Barros', 'Corrales', 'Azevedo', 'Nunes', 'Lacerda',
+  'Machado', 'Correia', 'Vieira', 'Tavares', 'Coelho',
+  'Gonçalves', 'Salgueiro', 'Sales', 'Amaral', 'Marquez',
+  'Abdel', 'Ahmed', 'Al-Farsi', 'Bakr', 'Daher',
+  'El-Sayed', 'Farid', 'Ghazali', 'Hakim', 'Ibrahim',
+  'Jamal', 'Khalil', 'Lutfi', 'Mahmoud', 'Nader',
+  'Osman', 'Pasha', 'Qasim', 'Rahman', 'Saad',
+  'Tariq', 'Uthman', 'Vahid', 'Wahid', 'Yasin',
+  'Zaki', 'Abadi', 'Bahri', 'Cherif', 'Dawoud',
+  'Fakih', 'Ghannam', 'Haddad', 'Issa', 'Jabari',
+  'Khoury', 'Laham', 'Mansour', 'Najjar', 'Omar',
+  'Qadri', 'Rizk', 'Said', 'Tannous', 'Uthmani',
+  'Vakil', 'Wahabi', 'Yousef', 'Zogby', 'Amin'
+
+];
+nombre1= [
+  'Achara', 'Bunleng', 'Chalerm', 'Duangkamol', 'Ekkachai',
+  'Fon', 'Gamon', 'Hathai', 'Inpaeng', 'Jiraporn',
+  'Kamol', 'Lalita', 'Manop', 'Narong', 'Onuma',
+  'Pariya', 'Quai', 'Rut', 'Sakda', 'Tidarat',
+  'Uthai', 'Vanna', 'Wimonrat', 'Xong', 'Yasaman',
+  'Zom', 'Chakri', 'Dara', 'Somchai', 'Siriporn',
+  'Noppadol', 'Pimchan', 'Anong', 'Anucha', 'Sirirat',
+  'Korn', 'Kittikhun', 'Chuthathip', 'Chayanit', 'Nanthiya',
+  'Chatri', 'Thanom', 'Thongchai', 'Thitima', 'Sasithorn',
+  'Pimchanok', 'Noppadol', 'Ananya', 'Siriporn',
+  'Hiroshi', 'Yuki', 'Haruka', 'Sora', 'Riko',
+  'Kenta', 'Sakura', 'Ren', 'Aoi', 'Taichi',
+  'Nana', 'Daichi', 'Yui', 'Yuto', 'Miyu',
+  'Ryota', 'Hinata', 'Miku', 'Kaito', 'Akari',
+  'Takumi', 'Mio', 'Kazuki', 'Nanami', 'Riku',
+  'Aya', 'Yuta', 'Ayumi', 'Hayato', 'Asuka',
+  'Takeru', 'Erika', 'Shota', 'Hikari', 'Yuki',
+  'Hana', 'Ren', 'Maya', 'Keisuke', 'Yuria',
+  'Koki', 'Kanon', 'Sho', 'Yurika', 'Ryosuke',
+  'Miki', 'Satoshi', 'Aimi', 'Tetsuya', 'Yuriko',
+  'Minho', 'Jiyeon', 'Hyeon', 'Seojin', 'Donghae',
+  'Jiwon', 'Hyunwoo', 'Soyeon', 'Eunji', 'Kibum',
+  'Yunseo', 'Boram', 'Taemin', 'Yeji', 'Joon',
+  'Yuna', 'Haeun', 'Jinwoo', 'Minji', 'Hansol',
+  'Chaewon', 'Seokjin', 'Soomin', 'Jaehyun', 'Heejin',
+  'Sungmin', 'Eunwoo', 'Kyungsoo', 'Hyunjin', 'Yeonwoo',
+  'Kihyun', 'Sana', 'Jisoo', 'Jungkook', 'Mina',
+  'Jihyo', 'Seungri', 'Nayeon', 'Felix', 'Wonyoung',
+  'Jimin', 'Seungmin', 'Taejoon', 'Soyoung', 'Taeyeon',
+  'Seulgi', 'Doyoung', 'Jisung', 'Byungchan', 'Changbin',
+  'Wei', 'Xia', 'Chen', 'Liu', 'Zhang',
+  'Li', 'Wang', 'Wu', 'Zhao', 'Huang',
+  'Zhu', 'Xu', 'Sun', 'Lin', 'Yang',
+  'Luo', 'Ma', 'Guo', 'Hu', 'Xie',
+  'Gao', 'Tang', 'Qian', 'Yuan', 'Hou',
+  'Cheng', 'Cai', 'Yao', 'Wei', 'Jiang',
+  'Deng', 'Fu', 'Shi', 'Song', 'Pan',
+  'Zeng', 'He', 'Lu', 'Fang', 'Yin',
+  'Mo', 'Jia', 'Qin', 'Liang', 'Han',
+  'Dai', 'Zou', 'Yuan', 'Ouyang', 'Martina',
+   ];
+const nombre2= [
+  'James', 'Emily', 'William', 'Olivia', 'Henry',
+  'Charlotte', 'George', 'Emma', 'Edward', 'Danna',
+  'Alexander', 'Ava', 'Thomas', 'Isabella', 'Samuel',
+  'Amelia', 'David', 'Ella', 'John', 'Grace',
+  'Jack', 'Mia', 'Robert', 'Abigail', 'Michael',
+  'Lily', 'Daniel', 'Scarlett', 'Brisseida', 'Andres',
+  'Benjamin', 'Ethan', 'Elizabeth', 'Joseph', 'Alice',
+  'Andrew', 'Madison', 'Christopher', 'Harper', 'Lucas',
+  'Evelyn', 'Daniel', 'Eleanor', 'Mason', 'Penelope',
+  'Sophie', 'Ryan', 'Avery', 'Jacob', 'Aria',
+  'Louis', 'Emma', 'Gabriel', 'Chloé', 'Jules',
+  'Léa', 'Lucas', 'Inès', 'Adam', 'Manon',
+  'Raphaël', 'Louise', 'Arthur', 'Camille', 'Hugo',
+  'Zoé', 'Maël', 'Léna', 'Nathan', 'Jade',
+  'Léo', 'Alice', 'Timéo', 'Lola', 'Gabin',
+  'Anna', 'Enzo', 'Julia', 'Noah', 'Sarah',
+  'Tom', 'Éva', 'Théo', 'Marian', 'Nolan',
+  'Mia', 'Mathis', 'Margaux', 'Sacha', 'Clara',
+  'Ethan', 'Manon', 'Maxime', 'Emma', 'Lilian',
+  'Léna', 'Nathan', 'Elise', 'Liam', 'Eva',
+  'Giovanni', 'Sofia', 'Alessandro', 'Giulia', 'Francesco',
+  'Emma', 'Leonardo', 'Aurora', 'Matteo', 'Greta',
+  'Lorenzo', 'Alice', 'Luca', 'Luna', 'Andrea',
+  'Giorgia', 'Gabriele', 'Bianca', 'Riccardo', 'Chiara',
+  'Antonio', 'Alessia', 'Niccolò', 'Ginevra', 'Marco',
+  'Camilla', 'Raffaele', 'Eleonora', 'Davide', 'Caterina',
+  'Simone', 'Vittoria', 'Federico', 'Elisa', 'Tommaso',
+  'Elena', 'Daniele', 'Vittorio', 'Valentina', 'Gabriel',
+  'Alessandra', 'Christian', 'Marta', 'Diego', 'Beatrice',
+  'Michele', 'Azul', 'Giacomo', 'Lucia', 'Luigi',
+  'Lukas', 'Mia', 'Benjamin', 'Emma', 'Paul',
+  'Hannah', 'Finn', 'Lina', 'Maximilian', 'Sophie',
+  'Luca', 'Emilia', 'Leon', 'Anna', 'Elias',
+  'Mila', 'Moritz', 'Lena', 'Noah', 'Amelie',
+  'Felix', 'Laura', 'Jakob', 'Marie', 'Tim',
+  'Lea', 'Liam', 'Johanna', 'Jonas', 'Clara',
+  'David', 'Sophia', 'Max', 'Julia', 'Niklas',
+  'Emily', 'Simon', 'Uziel', 'Oskar', 'Angel',
+  'Anton', 'Emma', 'Julian', 'Johanna', 'Tom',
+  'Matilda', 'Henry', 'Isabella', 'Ben', 'Eva'
+
+];
+   
+
+function generar(){
+
+var numeroVentas = document.getElementById("NumRegistros").value;
+var select= document.getElementById("usuario");
+var opcion = select.options[select.selectedIndex].value;
+var salida = `CREATE DATABASE IF NOT EXISTS Universidad;<br> USE Universidad;<br> CREATE TABLE IF NOT EXISTS ${opcion} (<br>  alumno_matricula INT(11) UNSIGNED NOT NULL UNIQUE,<br>  alumno_apellido1 VARCHAR(255) NOT NULL,<br>  alumno_apellido2 VARCHAR(255),<br>  alumno_nombres VARCHAR(255) NOT NULL,<br>  alumno_correo VARCHAR(255) NOT NULL UNIQUE<br>);<br> INSERT INTO ${opcion} (alumno_matricula, alumno_ap1, alumno_ap2, alumno_nombres, alumno_correo) VALUES <br>`;
+var matricula = 222200000;
+var matriculaAcade= 777700000;
+var matriculaAdmi=999900000; 
+
+switch (opcion){
+  case "alumno": 
+for (let i = 0; i < numeroVentas; i++) {
+  salida += `  (${matricula}, '${apellido1[Math.floor(Math.random() * 199)]}', 
+  '${apellido2[Math.floor(Math.random() * 199)]}', '${nombre1[Math.floor(Math.random() * 199)]} 
+  ${nombre2[Math.floor(Math.random() * 199)]}', '${matricula++}@unison.mx'),`;
+
+  if (i == numeroVentas-1) {
+    salida = salida.slice(0, -1) + ";"; // Eliminar la coma y agregar punto y coma
+  }
+
+  salida += " <br>";
+}
+break;
+case "administrativos": 
+for (let i = 0; i < numeroVentas; i++) {
+  salida += `  (${matriculaAdmi}, '${apellido1[Math.floor(Math.random() * 199)]}', 
+  '${apellido2[Math.floor(Math.random() * 199)]}', '${nombre1[Math.floor(Math.random() * 199)]} 
+  ${nombre2[Math.floor(Math.random() * 199)]}', '${matricula++}@unison.mx'),`;
+
+  if (i == numeroVentas-1) {
+    salida = salida.slice(0, -1) + ";"; // Eliminar la coma y agregar punto y coma
+  }
+
+  salida += " <br>";
+}
+break;
+case "academicos": 
+for (let i = 0; i < numeroVentas; i++) {
+  salida += `  (${matriculaAcade}, '${apellido1[Math.floor(Math.random() * 199)]}', 
+  '${apellido2[Math.floor(Math.random() * 199)]}', '${nombre1[Math.floor(Math.random() * 199)]} 
+  ${nombre2[Math.floor(Math.random() * 199)]}', '${matricula++}@unison.mx'),`;
+
+  if (i == numeroVentas-1) {
+    salida = salida.slice(0, -1) + ";"; // Eliminar la coma y agregar punto y coma
+  }
+
+  salida += " <br>";
+}
+break;
+}
+
+document.getElementById("salida").innerHTML = salida;
+}
+
+
+        function descargarCSV() {
+            let csvContent = "Apellido1, Apellido2, Nombre1\n";
+            for (let i = 0; i < apellido1.length; i++) {
+                csvContent += `${apellido1[i]},${apellido2[i]},${nombre1[i]} ${nombre2[i]}\n`;
+            }
+            let encodedUri = encodeURI("data:text/csv;charset=utf-8," + csvContent);
+            let link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "alumnos.csv");
+            document.body.appendChild(link);
+            link.click();
+        }
+
+        function descargarJSON() {
+            let jsonData = [];
+            for (let i = 0; i < apellido1.length; i++) {
+                let item = {
+                    Apellido1: apellido1[i],
+                    Apellido2: apellido2[i],
+                    Nombre1: nombre1[i] + ' ' + nombre2[i]
+                };
+                jsonData.push(item);
+            }
+            let jsonContent = JSON.stringify(jsonData, null, 2);
+            let encodedUri = encodeURI("data:text/json;charset=utf-8," + jsonContent);
+            let link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "alumnos.json");
+            document.body.appendChild(link);
+            link.click();
+        }
+
+        function descargarSQL() {
+            var contenidoSQL = document.getElementById("salida").innerText;
+            var blob = new Blob([contenidoSQL], { type: "text/plain" });
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "alumnos.sql";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+</script>
+</head>
+
+<body>
+
+Número de alumnos a generar:
+<input type="number" id="NumRegistros" required/>
+<select name="opcion" id="usuario">
+  <option value="alumno">
+    Alumnos
+  </option>
+  <option value="academicos">
+    Academicos
+  </option>
+  <option value="administrativos">
+    Administativos
+  </option>
+</select>
+<br>
+<input type="button" value="Generar" onclick="generar()" />
+<input type="button" value="Descargar archivo SQL" onclick="descargarSQL()">
+<input type="button" value="Descargar archivo JSON" onclick="descargarJSON()">
+<input type="button" value="Descargar archivo csv" onclick="descargarCSV()">
+<p id="salida"></p>
+
+
+</body>
+
+</html>
